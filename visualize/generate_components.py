@@ -27,16 +27,25 @@ import matplotlib.pyplot as plt
 from visualize.utils import tensor2image, tensor2seg
 
 component_dict_celeba = {
-    1:  "face",
-    2:  "eye",
-    3:  "eyebrow",
-    4:  "mouth",
-    5:  "nose",
-    6:  "ear",
-    7:  "hair",
-    8:  "neck",
-    9: "cloth",
+    0: '0',
+    1:  "1",
+    2: "2",
+    3: "3",
+    4: "4"
 }
+
+# component_dict_celeba = {
+#     0: 'back',
+#     1:  "face",
+#     2:  "eye",
+#     3:  "eyebrow",
+#     4:  "mouth",
+#     5:  "nose",
+#     6:  "ear",
+#     7:  "hair",
+#     8:  "neck",
+#     9: "cloth",
+# }
 
 def visualize_alpha(output_name, tensor):
     tensor = tensor.cpu().permute(1,2,0).numpy()
